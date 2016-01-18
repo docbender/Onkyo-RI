@@ -1,5 +1,5 @@
 # Onkyo-RI
-Control Onkyo devices through Remote Interactive port
+Control Onkyo devices is possible among others through Remote Interactive port. This port is normally used for direct communication between two Onkyo devices (ex. receiver and CD player). But why not turn on the receiver automatically when you start your own player?
 
 ## Connection
 To connect to the RI port is used 3.5mm mono jack. Data are sent via TTL logic.
@@ -14,10 +14,10 @@ or with grafical representation at:
 Protocol is pretty simple for implementation. In one message is transfered 12 bit code. This code represents action for target device. Most significant bit is send first.
 
 ## RI codes
-At mentioned sites are also listed codes for Onkyo devices. Unfortunnately none of the codes is not valid for my receiver TX-8020. To determine the valid codes I wrote a simple loop for Arduino that goes through the whole 12bit range of codes (0x0-0xFFF). Results are listed below commands.
+At mentioned sites are also listed codes for Onkyo devices. Unfortunnately none of the codes is not valid for my receiver TX-8020. To determine the valid codes I wrote a simple loop for Arduino that goes through the whole 12bit code range (0x0-0xFFF). Results are listed below commands.
 
 ### RI codes - receiver 
-Codes are valid for TX-8020 receiver
+Codes are valid for TX-8020 receiver. With a high probability it will work with other Onkyo receivers.
 <table>
   <tr><td><b>Action</b></td><td><b>Command</b></td><td><b>Notes</b></td></tr>
   <tr><td>Input CD</td><td>0x20</td><td>Switch input to CD channel</td></tr>
@@ -39,5 +39,5 @@ Codes are valid for TX-8020 receiver
   <tr><td>Radio search previous</td><td>0x431</td><td>Tune previous radio station when radio is selected.</td></tr>  
   <tr><td>Radio Stereo/Mono</td><td>0x432</td><td>Switch between Stereo and Mono when FM radio is selected.</td></tr>  
   <tr><td>Radio station next</td><td>0x433</td><td>Jump to next stored radio station when radio is selected.</td></tr>  
-  <tr><td>Radio station previous</td><td>0x434</td><td>Jump to previous stored radio station when radio is selected.</td></tr>    
+  <tr><td>Radio station previous</td><td>0x434</td><td>Jump to previous stored radio station when radio is selected.</td></tr>
 </table>
