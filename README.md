@@ -14,7 +14,7 @@ or with grafical representation at:
 Protocol is pretty simple for implementation. In one message is transfered 12 bit code. This code represents action for target device. Most significant bit is send first.
 
 ## RI codes
-At mentioned sites are also listed codes for Onkyo devices. Unfortunnately none of the codes is not valid for my receiver TX-8020. To determine the valid codes I wrote a simple loop for Arduino that goes through the whole 12bit code range (0x0-0xFFF). Results are listed below commands.
+At mentioned sites are also listed codes for Onkyo devices. Unfortunnately none of the codes is not valid for my receiver TX-8020. To determine the valid codes I wrote a simple loop for Arduino (more below) that goes through the whole 12bit code range (0x0-0xFFF). Results are listed below commands.
 
 ### RI codes - receiver 
 Codes are valid for TX-8020 receiver. With a high probability it will work with other Onkyo receivers.
@@ -41,3 +41,16 @@ Codes are valid for TX-8020 receiver. With a high probability it will work with 
   <tr><td>Radio station next</td><td>0x433</td><td>Jump to next stored radio station when radio is selected.</td></tr>  
   <tr><td>Radio station previous</td><td>0x434</td><td>Jump to previous stored radio station when radio is selected.</td></tr>
 </table>
+
+##Test program
+Program is located in repo folder Onkyo_test. It serves for check all codes (0x0 - 0xFFF) on target device in 500ms interval. For data line pin 10 is used as default. 
+
+Actual checked code is sent as ASCII through serial port and can be displayed in terminal. For serial port 9600b/s is set.  Using terminal test program can be stopped, reset or user defined code could be used. 
+
+Terminal commands:
+* p - pause/run command sending
+* r - reset loop (program start from 0)
+* hexadecimal number - number in hexadecimal format represents code that user want to test on target device. From this code automatical procedure will continue.
+
+
+
