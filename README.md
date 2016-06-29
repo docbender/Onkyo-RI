@@ -2,7 +2,7 @@
 Control Onkyo devices is possible among others through Remote Interactive port. This port is normally used for direct communication between two Onkyo devices (ex. receiver and CD player). But why not turn on the receiver automatically when you start your own player?
 
 ## Connection
-To connect to the RI port is used 3.5mm mono jack. Data are sent via TTL logic.
+To connect to the RI port is used 3.5mm mono jack. Tip is for data signal and sleeve is ground (GND). Data are sent via TTL logic. So it is easy to connect RI device to 5V MCU (Arduino). Just connect data signal to some output pin and connect GND between each other.
 
 ## Protocol
 Protocol description could be found at:
@@ -12,6 +12,11 @@ or with grafical representation at:
 *    http://fredboboss.free.fr/articles/onkyo_ri.php .
 
 Protocol is pretty simple for implementation. In one message is transfered 12 bit code. This code represents action for target device. Most significant bit is send first.
+
+## Library
+There are two Onkyo-RI library:
+* blocking - send() method blocks other program execution until whole command is sent. It takes up to 61 ms.
+* non-blocking - send() method only start command sending. The execution is handled by processing() function. This function must be called periodically with maximum 1 ms period. Function return bool value about sending status (true - data is being sent, false - nothing to sent/sending is done). Before the command is completely sent other functions can be executed. Library use internaly Arduino micros() function, so no other timer is not blocked.
 
 ## RI codes
 At mentioned sites are also listed codes for Onkyo devices. Unfortunnately none of the codes is not valid for my receiver TX-8020. To determine the valid codes I wrote a simple loop for Arduino (more below) that goes through the whole 12bit code range (0x0-0xFFF). Results are listed below commands.
