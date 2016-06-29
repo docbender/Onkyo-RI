@@ -44,12 +44,14 @@ void loop() {
       i=0;
       pause = false;
     }
-    if(c >= '0' and c <= '9' || c >= 'a' and c <= 'f')
+    if(c >= '0' and c <= '9' || c >= 'a' and c <= 'f' || c >= 'A' and c <= 'F')
     {
       if(c >= '0' and c <= '9')
         cmd = c-0x30;
       else if(c >= 'a' and c <= 'f')
         cmd = c-0x61+0xA;
+      else if(c >= 'A' and c <= 'F')
+        cmd = c-0x41+0xA;        
 
       delay(10);
         
@@ -57,7 +59,7 @@ void loop() {
       {
         c = Serial.read();
 
-        if(c >= '0' and c <= '9' || c >= 'a' and c <= 'f')
+        if(c >= '0' and c <= '9' || c >= 'a' and c <= 'f' || c >= 'A' and c <= 'F')
         {
           cmd <<=4;
   
@@ -65,6 +67,8 @@ void loop() {
             cmd += c-0x30;
           else if(c >= 'a' and c <= 'f')
             cmd += c-0x61+0xA;
+          else if(c >= 'A' and c <= 'F')
+            cmd += c-0x41+0xA;             
   
           delay(10);
         }
