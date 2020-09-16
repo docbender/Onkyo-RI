@@ -1,6 +1,13 @@
 # Onkyo-RI
 Control Onkyo devices is possible among others through Remote Interactive port. This port is normally used for direct communication between two Onkyo devices (ex. receiver and CD player). But why not turn on the receiver automatically when you start your own player?
 
+[![License](https://img.shields.io/github/license/docbender/Onkyo-RI)](https://github.com/docbender/Onkyo-RI)
+[![Stars](https://img.shields.io/github/stars/docbender/Onkyo-RI)](https://github.com/docbender/Onkyo-RI)
+[![Issues](https://img.shields.io/github/issues/docbender/Onkyo-RI)](https://github.com/docbender/Onkyo-RI/issues)
+[![Average time to resolve an issue](http://isitmaintained.com/badge/resolution/docbender/Onkyo-RI.svg)](http://isitmaintained.com/project/docbender/Onkyo-RI "Average time to resolve an issue")
+[![Percentage of issues still open](http://isitmaintained.com/badge/open/docbender/Onkyo-RI.svg)](http://isitmaintained.com/project/docbender/Onkyo-RI "Percentage of issues still open")
+
+
 ## Connection
 To connect to the RI port is used 3.5mm mono jack. Tip is for data signal and sleeve is ground (GND). Data are sent via TTL logic. So it is easy to connect RI device to 5V MCU (Arduino). Just connect data signal to some output pin and connect GND between each other.
 
