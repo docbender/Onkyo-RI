@@ -104,6 +104,27 @@ Thanks to jimtng
   <tr><td>Turn On + Input Video3</td><td>0x1AF</td><td>Turn ON receiver and select Video3 as input channel</td></tr>
 </table>
 
+### A-803 receiver
+<table>
+  <tr><td><b>Action</b></td><b>Command</b></td><td><b>Notes</b></td></tr>
+  <tr><td>Volume +</td><td>0x2</td><td>See notes on volume</td></tr>
+  <tr><td>Volume -</td><td>0x3</td><td>See notes on volume</td></tr>
+  <tr><td>Power On/Power Off</td><td>0x4</td><td>The receiver actually enters/exits standby since the only way to properly shut it down is through the power switch located on the front of the receiver itself.</td></tr>
+  <tr><td>Mute</td><td>0x5</td><td></td></tr>
+  <tr><td>Input Aux/Video</td><td>0x6</td><td></td></tr>
+  <tr><td>Input Tape-2 Monitor</td><td>0x7</td><td></td></tr>
+  <tr><td>Input Tape-1/DAT</td><td>0x8</td><td>Alternative code: 0x70.</td></tr>
+  <tr><td>Input CD</td><td>0x9</td><td>Alternative code: 0x20.</td></tr>
+  <tr><td>Input Phono</td><td>0xA</td><td>Alternative code: 0x30.</td></tr>
+  <tr><td>Input Tuner</td><td>0xB</td><td>Alternative code: 0xE0.</td></tr>
+  <tr><td>Source direct</td><td>0x13</td><td></td></tr>
+  <tr><td>OFF</td><td>0xEA</td><td>This code will switch the receiver into stanby mode, but it will not switch it back on.</td></tr>
+</table>
+
+#### Notes on volume
+Volume control codes shown in the table are sent by the receiver out of its RI ports when adjusting the volume using a remote control (they can be found using an oscilloscope).
+However, the receiver will not react to these codes when they are sent from an external device, effectively making impossible to control its volume through RI signals.
+
 ## Test program
 Program is located in repo folder Onkyo_test. It serves for check all codes (0x0 - 0xFFF) on target device in 500ms interval. For data line pin 10 is used as default. 
 
