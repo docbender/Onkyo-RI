@@ -106,7 +106,7 @@ Thanks to jimtng
 
 ### A-803 receiver
 <table>
-  <tr><td><b>Action</b></td><b>Command</b></td><td><b>Notes</b></td></tr>
+  <tr><td><b>Action</b></td><td><b>Command</b></td><td><b>Notes</b></td></tr>
   <tr><td>Volume +</td><td>0x2</td><td>See notes on volume</td></tr>
   <tr><td>Volume -</td><td>0x3</td><td>See notes on volume</td></tr>
   <tr><td>Power On/Power Off</td><td>0x4</td><td>The receiver actually enters/exits standby since the only way to properly shut it down is through the power switch located on the front of the receiver itself.</td></tr>
