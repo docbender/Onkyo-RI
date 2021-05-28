@@ -76,6 +76,25 @@ Thanks to lonejeeper
   <tr><td>Test mode</td><td>0x421 - 0x423, 0x430</td><td>RDS TEST</td></tr>  
 </table>
 
+### TX-SR313 receiver 
+Thanks to wongcz
+<table>
+  <tr><td><b>Action</b></td><td><b>Command</b></td><td><b>Notes</b></td></tr>
+  <tr><td>Input Aux</td><td>0x20</td><td>Switch input to AUX channel</td></tr>
+  <tr><td>Turn ON + AUX</td><td>0x2F</td><td>Turn ON receiver and select AUX as input channel</td></tr>
+  <tr><td>Input TV(/CD)</td><td>0x70</td><td>Switch input to TV(/CD) channel</td></tr>
+  <tr><td>Turn ON + input TV(/CD)</td><td>0x7F</td><td>Turn ON receiver and select TV(/CD) as input channel</td></tr>
+  <tr><td>Input BD/DVD</td><td>0x120</td><td>Switch input to BD/DVD channel</td></tr>
+  <tr><td>Turn ON + input BD/DVD</td><td>0x12F</td><td>Turn ON receiver and select BD/DVD as input channel</td></tr>
+  <tr><td>Turn ON + input DOCK</td><td>0x17F</td><td>Turn ON receiver and select DOCK as input channel</td></tr>
+  <tr><td>Dim</td><td>0x2B0</td><td>Set dimmer brightness to highest level</td></tr>
+  <tr><td>Dimer</td><td>0x2B1</td><td>Set dimmer brightness to mid level</td></tr>  
+  <tr><td>Dimmest</td><td>0x2B2</td><td>Set dimmer brightness to lowest level</td></tr>  
+  <tr><td>Dimmer Daytime</td><td>0x2B8</td><td>Set daytime brightness</td></tr>
+  <tr><td>Dimmer Nighttime</td><td>0x2BF</td><td>Set nighttime brightness</td></tr>    
+  <tr><td>Test mode</td><td>0x421 - 0x423, 0x430</td><td>RDS TEST</td></tr>  
+</table>
+
 ### TX-SR600 receiver 
 Thanks to kelvinlaw 
 <table>
