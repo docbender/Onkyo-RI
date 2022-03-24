@@ -95,6 +95,29 @@ Thanks to wongcz
   <tr><td>Test mode</td><td>0x421 - 0x423, 0x430</td><td>RDS TEST</td></tr>  
 </table>
 
+### TX-SR333 receiver 
+Thanks to ogrady
+<table>
+  <tr><td><b>Action</b></td><td><b>Command</b></td><td><b>Notes</b></td></tr>
+  <tr><td>Input TV/CD</td><td>0x20</td><td>Switch input to TV/CD channel</td></tr>
+  <tr><td>Input BD/DVD</td><td>0x120</td><td>Switch input to BD/DVD channel</td></tr>  
+  <tr><td>Dim</td><td>0x2B0</td><td>Set dimmer brightness to highest level</td></tr>
+  <tr><td>Dimer</td><td>0x2B1</td><td>Set dimmer brightness to mid level</td></tr>  
+  <tr><td>Dimmest</td><td>0x2B2</td><td>Set dimmer brightness to lowest level</td></tr>  
+  <tr><td>Test mode set</td><td>0x421 - 0x424</td><td>Test 1-00,2-00,3-00,4-00</td></tr>  
+  <tr><td>Test</td><td>0x425</td><td>Test x-01</td></tr>
+  <tr><td>Test</td><td>0x426</td><td>Test x-02</td></tr>
+  <tr><td>Test</td><td>0x427</td><td>WiFi test</td></tr>
+  <tr><td>Test</td><td>0x428</td><td>Route test</td></tr>
+  <tr><td>Test</td><td>0x42a</td><td>Key Test Mode</td></tr>
+  <tr><td>Test</td><td>0x42b</td><td>Test x-07</td></tr>
+  <tr><td>Test</td><td>0x42c</td><td>Test x-08</td></tr>
+  <tr><td>Test</td><td>0x42d</td><td>Test x-09</td></tr>
+  <tr><td>Test</td><td>0x42e</td><td>Test x-00</td></tr>
+  <tr><td>Test mode set</td><td>0x43e</td><td>Test 5-00</td></tr>
+  <tr><td>Test</td><td>0x43f</td><td>CEC test</td></tr>
+</table>
+
 ### TX-SR600 receiver 
 Thanks to kelvinlaw 
 <table>
