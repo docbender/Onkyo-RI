@@ -184,6 +184,31 @@ Thanks to jimtng
   <tr><td>OFF</td><td>0xEA</td><td>This code will switch the receiver into stanby mode, but it will not switch it back on.</td></tr>
 </table>
 
+### A-9050 receiver
+Thanks to Aaron G
+<table>
+  <tr><td><b>Action</b></td><td><b>Command</b></td><td><b>Notes</b></td></tr>
+  <tr><td>Vol Up</td><td>0x2</td><td>Volume Up</td></tr>
+  <tr><td>Vol Down</td><td>0x3</td><td>Volume Down</td></tr>
+  <tr><td>Turn ON/OFF</td><td>0x4</td><td>Turn receiver ON and OFF</td></tr>
+  <tr><td>Mute/Unmute</td><td>0x5</td><td>Toggle Mute</td></tr>
+  <tr><td>Input Line 1</td><td>0x20</td><td>Select Line 1 as input channel</td></tr>
+  <tr><td>Turn ON + Input Line 1</td><td>0x2F</td><td>Turn ON and select Line 1 as input channel</td></tr>
+  <tr><td>Input Next</td><td>0xD5</td><td>Select next input channel</td></tr>
+  <tr><td>Input Prev</td><td>0xD6</td><td>Select previous input channel</td></tr>
+  <tr><td>Mute</td><td>0xD7</td><td>Mute</td></tr>
+  <tr><td>Unmute</td><td>0xD8</td><td>Unmute</td></tr>
+  <tr><td>Turn ON</td><td>0xD9</td><td>Turn ON</td></tr>
+  <tr><td>Turn OFF</td><td>0xDA</td><td>Turn OFF</td></tr>
+  <tr><td>Input Line 2</td><td>0xE0</td><td>Select Line 2 as input channel</td></tr>
+  <tr><td>Turn ON + Input Line 2</td><td>0xFB</td><td>Turn ON and select Line 2 as input channel</td></tr>
+  <tr><td>Input Line 3</td><td>0x170</td><td>Select Line 3 as input channel</td></tr>
+  <tr><td>Turn ON + Input Line 3</td><td>0x17F</td><td>Turn ON and select Line 3 as input channel</td></tr>
+  <tr><td>Test</td><td>0x421</td><td>Test Mode?</td></tr>
+  <tr><td>Test</td><td>0x422</td><td>Test Mode?</td></tr>
+  <tr><td>Test</td><td>0x423</td><td>Test Mode?</td></tr>
+</table>
+
 #### Notes on volume
 Volume control codes shown in the table are sent by the receiver out of its RI ports when adjusting the volume using a remote control (they can be found using an oscilloscope).
 However, the receiver will not react to these codes when they are sent from an external device, effectively making impossible to control its volume through RI signals.
