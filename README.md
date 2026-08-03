@@ -268,6 +268,27 @@ Thanks to Aaron G
 Volume control codes shown in the table are sent by the receiver out of its RI ports when adjusting the volume using a remote control (they can be found using an oscilloscope).
 However, the receiver will not react to these codes when they are sent from an external device, effectively making impossible to control its volume through RI signals.
 
+### Onkyo ND-S1
+
+Thanks to asitwouldseem
+
+Onkyo ND-S1 is iPod dock and external audio interface for PCs of the era.
+
+<table>
+  <tr><td><b>Action</b></td><td><b>Command</b></td><td><b>Notes</b></td></tr>
+  <tr><td>Play</td><td>0x520</td><td></td></tr>
+  <tr><td>Pause</td><td>0x521</td><td></td></tr>
+  <tr><td>PC Mode</td><td>0x591</td><td></td></tr>
+  <tr><td>iPod Mode</td><td>0x594</td><td></td></tr>
+  <tr><td>Power Off</td><td>0x5C5</td><td></td></tr>
+  <tr><td>Menu</td><td>0x5D6</td><td></td></tr>
+  <tr><td>Centre Button</td><td>0x5D7</td><td></td></tr>
+  <tr><td>Skip Forwards</td><td>0x5C0</td><td></td></tr>
+  <tr><td>Skip Backwards</td><td>0x5C1</td><td></td></tr>
+  <tr><td>Power Toggle</td><td>0x5C4</td><td></td></tr>
+  <tr><td>Stop</td><td>0x5C7</td><td></td></tr>  
+</table>
+
 ## Test program
 Program is located in repo folder Onkyo_test. It serves for check all codes (0x0 - 0xFFF) on target device in 500ms interval. For data line pin 10 is used as default. 
 
