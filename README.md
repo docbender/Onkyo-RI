@@ -54,7 +54,7 @@ Codes are valid for TX-8020 receiver. With a high probability it will work with 
   <tr><td>Radio station previous</td><td>0x434</td><td>Jump to previous stored radio station when radio is selected.</td></tr>
 </table>
 
-### TX-SR304 receiver 
+### TX-SR304 receiver
 Thanks to lonejeeper 
 <table>
   <tr><td><b>Action</b></td><td><b>Command</b></td><td><b>Notes</b></td></tr>
@@ -118,7 +118,50 @@ Thanks to ogrady
   <tr><td>Test</td><td>0x43f</td><td>CEC test</td></tr>
 </table>
 
-### TX-SR600 receiver 
+### HT-R340 receiver
+
+Tested model: **Onkyo HT-R340**.
+
+The HT-R340 shares several RI commands with the TX-SR304, but some commands are
+accepted only while a particular input is selected. The following results were
+verified experimentally through the receiver's RI jack.
+
+<table>
+<tr><th>Command</th><th>Code</th><th>Result on HT-R340</th></tr>
+<tr><td>CD</td><td>0x020</td><td>Selects CD</td></tr>
+<tr><td>TAPE</td><td>0x070</td><td>Selects TAPE</td></tr>
+<tr><td>DVD</td><td>0x120</td><td>Selects DVD</td></tr>
+<tr><td>VIDEO2</td><td>0x1A0</td><td>Selects VIDEO2</td></tr>
+<tr><td>Power on + CD</td><td>0x02F</td><td>Verified</td></tr>
+<tr><td>Power on + DVD</td><td>0x12F</td><td>Verified</td></tr>
+<tr><td>Power on + VIDEO2</td><td>0x1AF</td><td>Verified</td></tr>
+<tr><td>Volume up</td><td>0x1A2</td><td>Works only while VIDEO2 is selected</td></tr>
+<tr><td>Volume down</td><td>0x1A3</td><td>Works only while VIDEO2 is selected</td></tr>
+<tr><td>Power off</td><td>0x1AE</td><td>Works only while VIDEO2 is selected</td></tr>
+</table>
+
+Negative results and cautions:
+
+* No working RI command for VIDEO1 has been found.
+* `0x170` (HDD on some receivers) did not select VIDEO3; no working VIDEO3
+  command has been found.
+* `0x002` and `0x003` do not act as receiver-wide volume commands.
+* The derived volume pairs `0x022`/`0x023`, `0x072`/`0x073`,
+  `0x122`/`0x123`, and `0x172`/`0x173` did not control volume on their
+  corresponding inputs.
+* The derived standby commands `0x02E`, `0x07E`, `0x12E`, and `0x17E` did not
+  switch the receiver off. Only `0x1AE`, with VIDEO2 selected, worked.
+* Therefore, a working input-group prefix plus a known suffix must not be
+  assumed to form a valid volume or standby command on this receiver.
+
+Use a correctly wired 3.5 mm mono cable: tip is RI data and sleeve is ground.
+Some TRS/TRRS cables do not mate correctly with the switched RI jack and can
+make otherwise valid commands appear not to work. In the tested setup, one
+three-contact 3.5 mm cable had ground on the ring (the middle contact), not on
+the sleeve. Do not assume a cable's internal wiring; verify its contacts with a
+multimeter before connecting it.
+
+### TX-SR600 receiver
 Thanks to kelvinlaw 
 <table>
   <tr><td><b>Action</b></td><td><b>Command</b></td><td><b>Notes</b></td></tr>
