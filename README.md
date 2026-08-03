@@ -161,6 +161,18 @@ three-contact 3.5 mm cable had ground on the ring (the middle contact), not on
 the sleeve. Do not assume a cable's internal wiring; verify its contacts with a
 multimeter before connecting it.
 
+### TX-SR504 receiver
+Thanks to eminent-noodles9 
+<table>
+  <tr><td><b>Action</b></td><td><b>Command</b></td><td><b>Notes</b></td></tr>
+  <tr><td>Power On</td><td>0x1AF</td><td>Power ON (works with the input Video 2)</td></tr>
+  <tr><td>Power Off</td><td>0x1AE</td><td>Power OFF (works with the input Video 2)</td></tr>
+  <tr><td>Mute</td><td>0x1A4</td><td>Mute (works with the input Video 2)</td></tr>
+  <tr><td>Unmute</td><td>0x1A5</td><td>Unmute (works with the input Video 2)</td></tr>
+  <tr><td>Volume Up</td><td>0x1A2</td><td>Volume Up (works with the input Video 2)</td></tr>  
+  <tr><td>Volume Down</td><td>0x1A3</td><td>Volume Down (works with the input Video 2)</td></tr>
+</table>
+
 ### TX-SR600 receiver
 Thanks to kelvinlaw 
 <table>
